@@ -6,7 +6,6 @@ module.exports = {
         'plugin:react-hooks/recommended',
         'prettier',
         'plugin:prettier/recommended',
-        'plugin:@next/next/recommended',
     ],
     plugins: ['@typescript-eslint', 'import', 'unused-imports'],
     parserOptions: {
