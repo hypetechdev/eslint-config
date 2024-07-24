@@ -1,81 +1,81 @@
 module.exports = {
-    parser: '@typescript-eslint/parser',
+    parser: "@typescript-eslint/parser",
     extends: [
-        'plugin:react/recommended',
-        'plugin:@typescript-eslint/recommended',
-        'plugin:react-hooks/recommended',
-        'prettier',
-        'plugin:prettier/recommended',
+        "plugin:react/recommended",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:react-hooks/recommended",
+        "prettier",
+        "plugin:prettier/recommended",
     ],
-    plugins: ['@typescript-eslint', 'import', 'unused-imports'],
+    plugins: ["@typescript-eslint", "import", "unused-imports"],
     parserOptions: {
         ecmaVersion: 2020,
-        sourceType: 'module',
+        sourceType: "module",
         ecmaFeatures: {
             jsx: true,
         },
     },
     rules: {
-        '@typescript-eslint/no-empty-interface': 'error',
-        '@typescript-eslint/explicit-module-boundary-types': 'off',
-        '@typescript-eslint/no-unused-vars': 'off',
-        '@typescript-eslint/no-var-requires': 'off',
-        '@typescript-eslint/padding-line-between-statements': [
-            'error',
+        "@typescript-eslint/no-empty-interface": "error",
+        "@typescript-eslint/explicit-module-boundary-types": "off",
+        "@typescript-eslint/no-unused-vars": "off",
+        "@typescript-eslint/no-var-requires": "off",
+        "@typescript-eslint/padding-line-between-statements": [
+            "error",
             {
-                blankLine: 'always',
-                prev: ['const', 'let', 'var', 'export', 'interface', 'type'],
-                next: '*',
+                blankLine: "always",
+                prev: ["const", "let", "var", "export", "interface", "type"],
+                next: "*",
             },
             {
-                blankLine: 'any',
-                prev: ['const', 'let', 'var'],
-                next: ['const', 'let', 'var'],
+                blankLine: "any",
+                prev: ["const", "let", "var"],
+                next: ["const", "let", "var"],
             },
-            { blankLine: 'always', prev: '*', next: ['interface', 'type'] },
+            { blankLine: "always", prev: "*", next: ["interface", "type"] },
         ],
-        'import/order': [
-            'error',
+        "import/order": [
+            "error",
             {
-                'newlines-between': 'always',
+                "newlines-between": "always",
                 // alphabetize: { order: 'asc', caseInsensitive: true },
                 // Custom groups for sorting
                 pathGroups: [
-                    '@/',
-                    'types',
-                    'config',
-                    'lib',
-                    'app',
-                    'components',
-                    'pages',
-                    'res',
+                    "@/",
+                    "types",
+                    "config",
+                    "lib",
+                    "app",
+                    "components",
+                    "pages",
+                    "res",
                 ].map(function (path) {
                     return {
-                        pattern: path + '/**',
-                        group: 'external',
-                        position: 'after',
-                    }
+                        pattern: path + "/**",
+                        group: "external",
+                        position: "after",
+                    };
                 }),
-                pathGroupsExcludedImportTypes: ['builtin'],
+                pathGroupsExcludedImportTypes: ["builtin"],
             },
         ],
-        'padding-line-between-statements': 'off',
-        'prettier/prettier': 'error',
-        'react/react-in-jsx-scope': 'off',
-        'unused-imports/no-unused-imports-ts': 'error',
-        'unused-imports/no-unused-vars-ts': [
-            'warn',
+        "padding-line-between-statements": "off",
+        "prettier/prettier": "error",
+        "react/react-in-jsx-scope": "off",
+        "unused-imports/no-unused-imports-ts": "error",
+        "unused-imports/no-unused-vars-ts": [
+            "warn",
             {
-                vars: 'all',
-                varsIgnorePattern: '^_',
-                args: 'after-used',
-                argsIgnorePattern: '^_',
+                vars: "all",
+                varsIgnorePattern: "^_",
+                args: "after-used",
+                argsIgnorePattern: "^_",
             },
         ],
     },
     settings: {
         react: {
-            version: 'detect',
+            version: "detect",
         },
     },
-}
+};

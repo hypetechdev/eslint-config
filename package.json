@@ -1,6 +1,6 @@
 {
     "name": "@hypetech/eslint-config",
-    "version": "2.0.0",
+    "version": "2.1.0",
     "description": "ESlint config based on HypeTech Frontend Coding Standards",
     "keywords": [
         "HypeTech",
@@ -18,15 +18,15 @@
     "license": "MIT",
     "main": "index.js",
     "dependencies": {
-        "@typescript-eslint/eslint-plugin": "^6.13.2",
-        "@typescript-eslint/parser": "^6.13.2",
+        "@typescript-eslint/eslint-plugin": "^7.17.0",
+        "@typescript-eslint/parser": "^7.17.0",
         "eslint-config-prettier": "^9.1.0",
         "eslint-config-turbo": "latest",
-        "eslint-plugin-import": "^2.29.0",
-        "eslint-plugin-prettier": "^5.0.1",
-        "eslint-plugin-react": "7.33.2",
-        "eslint-plugin-react-hooks": "^4.6.0",
-        "eslint-plugin-unused-imports": "^3.0.0"
+        "eslint-plugin-import": "^2.29.1",
+        "eslint-plugin-prettier": "^5.2.1",
+        "eslint-plugin-react": "7.35.0",
+        "eslint-plugin-react-hooks": "^4.6.2",
+        "eslint-plugin-unused-imports": "^3.2.0"
     },
     "peerDependencies": {
         "eslint": ">=8.x",
