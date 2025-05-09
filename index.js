@@ -9,7 +9,7 @@ module.exports = {
     ],
     plugins: ["@typescript-eslint", "import", "unused-imports"],
     parserOptions: {
-        ecmaVersion: 2020,
+        ecmaVersion: 2022, // Updated to support newer JavaScript features in Next.js 15
         sourceType: "module",
         ecmaFeatures: {
             jsx: true,
@@ -38,7 +38,7 @@ module.exports = {
             "error",
             {
                 "newlines-between": "always",
-                // alphabetize: { order: 'asc', caseInsensitive: true },
+                alphabetize: { order: 'asc', caseInsensitive: true },
                 // Custom groups for sorting
                 pathGroups: [
                     "@/",
