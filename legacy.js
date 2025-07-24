@@ -7,7 +7,7 @@ module.exports = {
         "prettier",
         "plugin:prettier/recommended",
     ],
-    plugins: ["@typescript-eslint", "import", "unused-imports"],
+    plugins: ["react", "@typescript-eslint", "import", "unused-imports"],
     parserOptions: {
         ecmaVersion: 2022, // Updated to support newer JavaScript features in Next.js 15
         sourceType: "module",

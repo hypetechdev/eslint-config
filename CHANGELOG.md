@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [3.0.1] - 2025-07-24
+
+### Fixed
+
+- Fixed "Failed to load plugin 'react'" error in legacy configuration by explicitly declaring the react plugin
+- Added missing react plugin declaration in legacy.js plugins array
+
 ## [3.0.0] - 2025-07-24
 
 ### Breaking Changes
