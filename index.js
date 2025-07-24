@@ -197,13 +197,14 @@ export default [
                     endOfLine: 'auto',
                     semi: false,
                     trailingComma: 'es5',
-                    singleQuote: true,
-                    printWidth: 100,
+                    singleQuote: false,
+                    printWidth: 120,
                     tabWidth: 4,
                     useTabs: false,
                     bracketSpacing: true,
                     bracketSameLine: false,
                     arrowParens: 'avoid',
+                    quoteProps: "preserve"
                 },
             ],
 

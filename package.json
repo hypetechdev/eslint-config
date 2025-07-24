@@ -1,6 +1,6 @@
 {
     "name": "@hypetech/eslint-config",
-    "version": "3.0.1",
+    "version": "3.0.2",
     "description": "ESlint config based on HypeTech Frontend Coding Standards",
     "keywords": [
         "HypeTech",
