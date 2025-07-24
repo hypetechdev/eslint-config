@@ -2,20 +2,37 @@
 
 All notable changes to this project will be documented in this file.
 
-## [3.0.0] - 2025-05-09
+## [3.0.0] - 2025-07-24
+
+### Breaking Changes
+
+- **Default export changed**: The package now exports the Next.js 15 flat configuration by default
+- **Legacy configuration moved**: ESLint 8.x configuration is now available at `@hypetech/eslint-config/legacy`
+- **Minimum ESLint version**: Now requires ESLint 9.x or higher
 
 ### Added
 
-- Support for Next.js 15 with ESLint 9 flat configuration system
-- New flat config export via `@hypetech/eslint-config/flat`
+- Full support for Next.js 15 with ESLint 9 flat configuration system as the default export
+- New legacy export path (`/legacy`) for backward compatibility with ESLint 8.x
+- New dependency: `@next/eslint-plugin-next` for Next.js 15 specific rules
 - Example configurations for both Next.js 14 and Next.js 15
-- Comprehensive documentation for both configuration types
+- Comprehensive globals definition for browser, Node.js, and React environments
+- Improved import ordering with more granular path groups
 
 ### Changed
 
-- Updated `ecmaVersion` from 2020 to 2022 in the traditional configuration
-- Updated peer dependency for ESLint to require version 9.x or higher
-- Added new dependencies: `@eslint/eslintrc` and `@eslint/js` for flat config support
+- **Default configuration**: Next.js 15 flat config is now the main export (`index.js`)
+- **Import path for flat config**: Still available at `/flat` but now identical to default export
+- Updated `ecmaVersion` to `latest` in the flat configuration
+- Enhanced TypeScript configuration with project-aware parsing
+- Updated all dependencies to their latest versions
+- Restructured package exports for better developer experience
+
+### Migration Guide
+
+- For Next.js 15 projects: Use the default import `import eslintConfig from '@hypetech/eslint-config'`
+- For legacy projects: Update imports to use `@hypetech/eslint-config/legacy`
+- All ESLint plugins are now included as dependencies (no need to install separately)
 
 ## [2.1.0] - 2023-07-24
 

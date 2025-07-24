@@ -11,8 +11,8 @@ const compat = new FlatCompat({
   recommendedConfig: js.configs.recommended,
 });
 
-// Import the existing configuration
-const existingConfig = require("./index.js");
+// Import the legacy configuration
+const existingConfig = require("./legacy.js");
 
 const eslintConfig = [
   ...compat.config({

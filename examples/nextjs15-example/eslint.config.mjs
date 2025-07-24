@@ -1,20 +1,8 @@
-// Example eslint.config.mjs for a Next.js 15 project
-import { dirname } from "path";
-import { fileURLToPath } from "url";
-import { FlatCompat } from "@eslint/eslintrc";
-import js from "@eslint/js";
-import hypeConfig from '../../eslint.config.mjs';
+// Example eslint.config.mjs for a Next.js 15 project using ESLint 9.x
+import eslintConfig from '@hypetech/eslint-config';
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
-
-const compat = new FlatCompat({
-  baseDirectory: __dirname,
-  recommendedConfig: js.configs.recommended,
-});
-
-const eslintConfig = [
-  ...hypeConfig,
+export default [
+  ...eslintConfig,
   // Project-specific configurations
   {
     files: ["**/*.ts", "**/*.tsx"],
@@ -24,5 +12,3 @@ const eslintConfig = [
     },
   },
 ];
-
-export default eslintConfig;
